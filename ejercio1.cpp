@@ -22,14 +22,11 @@ if(validadatos(caracteres)==true){
         cout<<"NO cumple la condicion para el lenguaje "<<endl;
     }
 }
-    else
-    {
+    else{
         cout<<"Los datos ingresados NO SON validos para el lenguaje "<<endl;
     }
    return 0;
 }
-
-
 
 bool validadatos(char alfabeto[50]){  // SOLO PUEDE RECIBIR a,b,o,*
     int longitud=0;
@@ -45,31 +42,22 @@ bool validadatos(char alfabeto[50]){  // SOLO PUEDE RECIBIR a,b,o,*
     return true;
 }
 
-//COMIENZA CON A Y NO CONTIENE *
-
-bool validacondicion(char alfabeto[50]){
+bool validacondicion(char alfabeto[50]){  //COMIENZA CON A Y NO CONTIENE *
     int longitud=0;
     longitud=strlen(alfabeto);
     int i=0;
     if(alfabeto[0]!=('a')){
     return false;
     }
-    else
-    {
-         for (size_t i = 1; i <longitud; i++)
-    {
-        if (alfabeto[i]==('*'))
-        {
+    else{
+        for (size_t i = 1; i <longitud; i++){
+         if (alfabeto[i]==('*')){
             return false;
-        
         }
-        
     }
-   
     }
      return true;
-    
-}
+} 
 
 
 
