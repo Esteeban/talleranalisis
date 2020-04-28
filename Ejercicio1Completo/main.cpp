@@ -5,9 +5,6 @@
 
 using namespace std;
 
-/**
- * Función que muestra los participantes del grupo
- */
 void participantes();
 
 /**
@@ -18,18 +15,13 @@ void participantes();
  */
 int main(int argc, char **argv)
 {
-
-    /**
-     * Incluir acá la lógica del programa
-     * 
-     */
     if (argc > 1)
     {
         std::string argumento(argv[1]);
-        bool cumple= validacondicion(( char *)argumento.c_str());
-        bool sirve= validadatos((char *)argumento.c_str());
-
-        if ((cumple)&&(sirve))
+        bool sirve = validadatos((char *)argumento.c_str());
+        bool cumple = validacondicion((char *)argumento.c_str());
+        
+        if ((sirve) && (cumple))
         {
             std::cout << std::endl
                       << "SI cumple la condición" << std::endl;
@@ -39,11 +31,9 @@ int main(int argc, char **argv)
             std::cout << std::endl
                       << "NO cumple la condición " << std::endl;
         }
-       
     }
     else
     {
-        // Mostrar los integrantes
         participantes();
     }
     return EXIT_SUCCESS;
@@ -54,9 +44,9 @@ void participantes()
     std::cout << std::endl
               << "=== Taller 01 ===" << std::endl;
     std::cout << std::endl
-              << "Andres Muñoz Gonzalez"; // Reemplazar por su nombre
+              << "Andres Muñoz Gonzalez";
     std::cout << std::endl
-              << "Esteban Rojas Rojas"; // Reemplazar por su nombre
+              << "Esteban Rojas Rojas";
     std::cout << std::endl
-              << "Ignacio Valdebonito Aldana" << std::endl; // Reemplazar por su nombre
+              << "Ignacio Valdebenito Aldana" << std::endl;
 }

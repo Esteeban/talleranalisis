@@ -3,15 +3,13 @@
 #include <string.h>
 #include "funciones.h"
 
-bool validadatos(char alfabeto[50])
-{ // SOLO PUEDE RECIBIR a,b,o,*
+
+bool validadatos(string alfabeto)
+{ // Funcion Validadatos solo puede recibir caracteres: a,o,b,*
     int longitud = 0;
-    longitud = strlen(alfabeto);
-    int i = 0;
-    //cout<<"\n el largo de chharacteres es: "<<longitud<<endl;    <-- muestra el largo de caracteres
-    for (size_t i = 0; i < longitud; i++)
+    longitud = alfabeto.length();
+    for (int i = 0; i<longitud; i++)
     {
-        //cout<<" el dato numero "<<i<<" es: "<<alfabeto[i]<<endl; <-- muestra mi contador
         if (alfabeto[i] != ('a') && alfabeto[i] != ('b') && alfabeto[i] != ('o') && alfabeto[i] != ('*'))
         {
             return false;
@@ -20,18 +18,17 @@ bool validadatos(char alfabeto[50])
     return true;
 }
 
-bool validacondicion(char alfabeto[50])
-{ // COMIENZA CON a Y NO PUEDE CONTENER *
+bool validacondicion(string alfabeto)
+{ // Funcion Validacondicion condiciona que comienze con 'a' y no contenga '*'
     int longitud = 0;
-    longitud = strlen(alfabeto);
-    int i = 0;
+    longitud = alfabeto.length();
     if (alfabeto[0] != ('a'))
     {
         return false;
     }
     else
     {
-        for (size_t i = 1; i < longitud; i++)
+        for (int i = 1; i < longitud; i++)
         {
             if (alfabeto[i] == ('*'))
             {

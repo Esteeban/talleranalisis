@@ -1,10 +1,6 @@
-CXX = g++                                               #VARIABLES
-CXXFLAGS = -g3 -Wall -lm     #<-- GENERA OBJETOS                #CXXFLAGS: ARGUMENTOS DE COMPIL 
-MKDIR = mkdir -p                             #-g3: se compila con +info para deback
-				              #-Wall: imprime por pantalla todos los warnings que se ejecuten 
-				              #-lm: algo con las funciones matematicas
-				              # mkdir -p: crea directorios
-				              # -lm:  
+CXX = g++                                              
+CXXFLAGS = -g3 -Wall -lm     
+MKDIR = mkdir -p                            				              
 LIBS = -lm
 
 directorios:
