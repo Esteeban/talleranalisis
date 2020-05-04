@@ -17,8 +17,11 @@ int main(int argc, char **argv)
 {
     if (argc > 1)
     {
+        std::cout << std::endl
+            << "== Expresion simplificada ==" << std::endl;
         std::string argumento(argv[1]);
-        simplificar(argumento);   
+        simplificar(argumento); 
+        participantes();  
     }
     else
     {
